@@ -41,4 +41,4 @@ def predict():
         return jsonify(result)
     except Exception as exc:  # noqa: BLE001
         logger.exception("Prediction failed")
-        return jsonify({"error": f"Prediction failed: {exc}"}), 500
+        return jsonify({"error": "Prediction failed due to internal processing error."}), 500
