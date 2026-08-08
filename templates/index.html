@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lung Cancer Detection (Research)</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <main class="container">
+    <h1>Lung Cancer Detection using 3D CNN + Radiomics</h1>
+    <p class="subtitle">Research/Educational tool only — not a clinical diagnosis.</p>
+
+    <form id="upload-form">
+      <input type="file" id="scan" name="scan" accept=".npy,.nii,.nii.gz" required />
+      <button type="submit">Run Prediction</button>
+    </form>
+
+    <section id="result" class="card hidden"></section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

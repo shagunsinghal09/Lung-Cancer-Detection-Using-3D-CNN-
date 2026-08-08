@@ -15,7 +15,7 @@ env/
 *.swp
 .DS_Store
 
-# Claude / local agent state
+# Local agent state
 .claude/
 
 # Environment files
@@ -24,3 +24,6 @@ env/
 
 # Large generated artifacts
 preprocessed/*.npz
+uploads/*.npy
+uploads/*.nii
+uploads/*.nii.gz

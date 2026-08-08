@@ -1,0 +1,8 @@
+project:
+  name: Lung Cancer Detection using 3D CNN + Radiomics
+  mode: research
+  disclaimer: "Not for clinical diagnosis"
+model:
+  input_shape: [64, 64, 64]
+  cnn_embedding_size: 16
+  classification_threshold: 0.5
