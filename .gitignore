@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Claude / local agent state
+.claude/
+
+# Environment files
+.env
+.env.local
+
+# Large generated artifacts
+preprocessed/*.npz

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: lung-cancer-detection
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: >
+      bash -c "uvicorn app:app --host 127.0.0.1 --port 8000 &
+      streamlit run frontend1/app.py
+      --server.port $PORT
+      --server.address 0.0.0.0
+      --server.headless true
+      --server.enableCORS false
+      --server.enableXsrfProtection false
+      --browser.gatherUsageStats false"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
